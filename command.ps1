@@ -7,7 +7,7 @@ if((Test-Path -Path $Risa3dHklmPath) -ne $true){
     exit 1
 }
 ## set License Type List value for LM reg
-$LicenseTypeListCurrentValue = Get-ItemProperty -Path $Risa3dHklmPath -Name 'License Type List'
+$LicenseTypeListCurrentValue = Get-ItemPropertyValue -Path $Risa3dHklmPath -Name 'License Type List'
 Write-Host "Current License Type List value [$($LicenseTypeListCurrentValue)]"
 if($LicenseTypeListCurrentValue -ne $LicenseTypeListDesiredValue){
     try{
